@@ -8,7 +8,12 @@ The setup will include an Envoy proxy as a reverse proxy for a WebSocket applica
 1. Project Structure and Tooling
 
    - Pulumi Project(s):
-     - Requirement: A single Pulumi project using Python is recommended for this scope.
+     - Requirement: A separate Pulumi project/folder using Python for each requirement section in this document.
+     - use Pulumi stack reference to share resources across stacks.
+     - all folders to share same Pulumi venv, located at same leve as the Pulumi project folders
+     - pulumi preview and pulumi up commands are to be able to be run without any additional arguments.
+     - hardcoded values are to be avoided, use Pulumi config for all configurable values
+     - only language to be used is Python
      - Naming Convention: All resources within Pulumi code must use descriptive names (e.g., 'envoy_poc_eks_cluster', 'envoy_poc_app_ecr_repository', 'envoy_poc_vpc').
    - External Python Scripts/Boto3:
      - Requirement: Utilize Python scripts with Boto3 for tasks outside Pulumi's core infrastructure provisioning (e.g., building and pushing Docker images to ECR).

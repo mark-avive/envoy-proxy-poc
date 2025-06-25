@@ -1,6 +1,0 @@
-name: envoy-proxy-poc
-runtime:
-  name: python
-  options:
-    virtualenv: venv
-description: AWS EKS cluster with Envoy proxy POC infrastructure

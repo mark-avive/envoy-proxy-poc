@@ -1,5 +1,0 @@
-secretsprovider: awskms://alias/pulumi-envoy-proxy-iac?region=us-west-2
-encryptedkey: AQICAHgCL0jERa97zGRxOVvgf1IHge1/vRR9PCVfv33x55/ihAGX9r6zjbKRTkNJKLe+cXU0AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMAvi3Vk+lua92QijUAgEQgDs0V0FqJ26gy4pnWFTEee38PNvpG6BYXdt+tK0FBe68RrU3aZOWJia+iGCbNL0AxdxRahpVz87Qmp7Heg==
-config:
-  aws:profile: avive-cfndev-k8s
-  aws:region: us-west-2
