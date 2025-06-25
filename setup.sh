@@ -55,9 +55,16 @@ if ! check_kms_key; then
 fi
 echo "✅ KMS key access verified"
 
-# Initialize stack with KMS encryption
-echo "🆕 Creating Pulumi stack '$PULUMI_STACK_NAME' with KMS encryption..."
-pulumi stack init "$PULUMI_STACK_NAME" --secrets-provider="$PULUMI_SECRETS_PROVIDER"
+# Initialize or select existing stack with KMS encryption
+echo "🆕 Setting up Pulumi stack '$PULUMI_STACK_NAME'..."
+
+# Try to select the stack first, if it fails then create it
+if pulumi stack select "$PULUMI_STACK_NAME" 2>/dev/null; then
+    echo "   Stack '$PULUMI_STACK_NAME' already exists, using it..."
+else
+    echo "   Creating new stack '$PULUMI_STACK_NAME' with KMS encryption..."
+    pulumi stack init "$PULUMI_STACK_NAME" --secrets-provider="$PULUMI_SECRETS_PROVIDER"
+fi
 
 # Set AWS configuration
 echo "⚙️  Configuring AWS settings..."

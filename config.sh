@@ -18,6 +18,7 @@ export PULUMI_S3_BACKEND="s3://cfndev-envoy-proxy-poc-pulumi-state"
 # Project Configuration
 export PROJECT_NAME="envoy-proxy-poc"
 export PROJECT_TAGS="TagKey=Project,TagValue=envoy-proxy-poc TagKey=Purpose,TagValue=pulumi-secrets TagKey=Environment,TagValue=poc"
+export CLUSTER_NAME="envoy-poc"
 
 # Derived values
 export PULUMI_SECRETS_PROVIDER="awskms://${KMS_KEY_ALIAS}?region=${AWS_REGION}"
