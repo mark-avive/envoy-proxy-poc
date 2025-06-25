@@ -1,0 +1,8 @@
+secretsprovider: awskms://alias/pulumi-envoy-proxy-iac?region=us-west-2
+encryptedkey: AQICAHgCL0jERa97zGRxOVvgf1IHge1/vRR9PCVfv33x55/ihAGDNAsBMelNOtzZVIu/WCaLAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMc4LP/d9Abtlyx78YAgEQgDvsguEoBKLWyAqp6RvBW29tybVLZWmDt7wDJKe6vTQYKcQT/FDaMRXhJedaLxEIKYWI4iTCwOjtaJAyjw==
+config:
+  aws:region: us-west-2
+  aws:profile: avive-cfndev-k8s
+  envoy-poc-aws-networking:vpc_name: envoy-vpc
+  envoy-poc-aws-networking:vpc_cidr: 172.245.0.0/16
+  envoy-poc-aws-networking:project_name: envoy-poc

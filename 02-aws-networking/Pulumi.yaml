@@ -1,0 +1,11 @@
+name: envoy-poc-aws-networking
+description: AWS Networking infrastructure for Envoy Proxy POC - VPC, Subnets, Security Groups
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: ../pulumi-venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
