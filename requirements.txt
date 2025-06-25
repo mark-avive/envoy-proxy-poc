@@ -17,7 +17,7 @@ The setup will include an Envoy proxy as a reverse proxy for a WebSocket applica
      - S3 Bucket Name: 'cfndev-envoy-proxy-poc-pulumi-state'
      - S3 Key Prefix: 'envoy-poc/'
    - AWS Credentials:
-     - Requirement: Pulumi will use AWS SSO credentials via the local AWS CLI profile 'set-cfndev-ina-a'.
+     - Requirement: Pulumi will use AWS SSO credentials via the local AWS CLI profile 'avive-cfndev-k8s'.
 
 ---
 
