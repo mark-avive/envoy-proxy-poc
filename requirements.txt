@@ -14,6 +14,7 @@ The setup will include an Envoy proxy as a reverse proxy for a WebSocket applica
      - pulumi preview and pulumi up commands are to be able to be run without any additional arguments.
      - hardcoded values are to be avoided, use Pulumi config for all configurable values
      - only language to be used is Python
+     - pulumi to use pre-existing aws kms key: pulumi-envoy-proxy-iac
      - any code not directly contibuting to these requirements or needed for pulumi functionality must be explicitly approved
      - Naming Convention: All resources within Pulumi code must use descriptive names (e.g., 'envoy_poc_eks_cluster', 'envoy_poc_app_ecr_repository', 'envoy_poc_vpc').
    - External Python Scripts/Boto3:
