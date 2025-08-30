@@ -1,0 +1,15 @@
+secretsprovider: awskms://alias/pulumi-envoy-proxy-iac?region=us-west-2
+encryptedkey: AQICAHgCL0jERa97zGRxOVvgf1IHge1/vRR9PCVfv33x55/ihAGDNAsBMelNOtzZVIu/WCaLAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMc4LP/d9Abtlyx78YAgEQgDvsguEoBKLWyAqp6RvBW29tybVLZWmDt7wDJKe6vTQYKcQT/FDaMRXhJedaLxEIKYWI4iTCwOjtaJAyjw==
+config:
+  aws:region: us-west-2
+  aws:profile: avive-cfndev-k8s
+  envoy-poc-eks-cluster:cluster_name: envoy-poc
+  envoy-poc-eks-cluster:kubernetes_version: "1.33"
+  envoy-poc-eks-cluster:project_name: envoy-poc
+  envoy-poc-eks-cluster:node_instance_type: t3.medium
+  envoy-poc-eks-cluster:node_desired_capacity: 2
+  envoy-poc-eks-cluster:node_min_capacity: 2
+  envoy-poc-eks-cluster:node_max_capacity: 4
+  envoy-poc-eks-cluster:node_ami_type: AL2_x86_64
+  envoy-poc-eks-cluster:networking_stack_name: 02-aws-networking
+  envoy-poc-eks-cluster:kms_key_alias: alias/pulumi-envoy-proxy-iac

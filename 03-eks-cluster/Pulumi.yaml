@@ -1,0 +1,11 @@
+name: envoy-poc-eks-cluster
+description: AWS EKS Cluster infrastructure for Envoy Proxy POC - EKS Cluster and Node Group
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: ../pulumi-venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
